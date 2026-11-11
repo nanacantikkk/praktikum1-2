@@ -1,39 +1,30 @@
 <!DOCTYPE html>
-<html lang='id'>
-<head>
-  <meta charset='UTF-8'>
-  <title>Counter</title>
-  <style>
-    body { font-family: Arial; text-align: center; margin-top: 50px; }
-    #angka { font-size: 64px; }
-    button { font-size: 20px; padding: 10px 20px; margin: 5px; }
-  </style>
-</head>
-<body>
-  <h2>Counter</h2>
-  <div id='angka'>0</div>
-  <button id='tambah'>+ Tambah</button>
-  <button id='kurang'>- Kurang</button>
-  <button id='reset'>Reset</button>
+<html lang="id">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Praktikum 1</title>
+    </head>
+    <body>
+        <h1 id="judul">Aku belum berubah...</h1>
+        <button id="btnUbah">Ubah Teks</button>
+        <button id="btnWarna">Ubah Warna</button>
 
-  <script>
-    let hitung = 0;
-    const angka = document.getElementById('angka');
+        <script>
+            const judul = document.getElementById('judul');
+            const btnUbah = document.getElementById('btnUbah');
+            const btnWarna = document.getElementById('btnWarna');
 
-    document.getElementById('tambah').addEventListener('click', () => {
-      hitung = hitung + 1;
-      angka.textContent = hitung;
-    });
+            btnUbah.addEventListener('click', function() {
+                judul.textContent = 'Aku sudah berubah!';
+            });
 
-    document.getElementById('kurang').addEventListener('click', () => {
-      hitung = hitung - 1;
-      angka.textContent = hitung;
-    });
-
-    document.getElementById('reset').addEventListener('click', () => {
-      hitung = 0;
-      angka.textContent = hitung;
-    });
-  </script>
-</body>
+            btnWarna.addEventListener('click', function() {
+                judul.style.color = 'navy';
+            });
+        </script>
+    </body>
+    </html>
 </html>
